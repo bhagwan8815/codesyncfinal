@@ -19,7 +19,7 @@ export default function EditorComponent() {
     setJobId("");
 
     try {
-      const { data } = await axios.post("http://localhost:5000/run", payload);
+      const { data } = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/run`, payload);
       console.log("Data from backend API:", data);
 
       setJobId(data.jobId);
@@ -27,7 +27,7 @@ export default function EditorComponent() {
       let intervalId = setInterval(async () => {
         try {
           const { data: dataRes } = await axios.get(
-            "http://localhost:5000/status",
+           `${process.env.REACT_APP_BACKEND_URL}/status`,
             {
               params: { id: data.jobId },
             }
