@@ -51,7 +51,7 @@ OpenAI API (for AI code reviews).
 
 1. Clone the repository to your local machine.
     ```sh
-    git clone https://github.com/bhagwan8815/CodeSync.git
+    git clone https://github.com/bhagwan8815/codesyncfinal.git
 
     ```
 
